@@ -6,6 +6,7 @@
 package planten;
 
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.*;
 //import java.lang;
 
@@ -18,6 +19,7 @@ public class DrawWindow extends JPanel {
 
     protected int[] drawsun,drawearth,drawmoon,sun,earth,moon;
     private double counter;
+    ArrayList<Graphenknoten> planeten;
 
     public DrawWindow(){
         super();
