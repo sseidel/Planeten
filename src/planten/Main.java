@@ -22,8 +22,6 @@ public class Main {
         Window myWindow=new Window("malen");
         Timer timer = new Timer();
         myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // TODO code application logic here
-
         timer.schedule(new Task(myWindow.myDrawWindow), 1000,100);
     }
 
