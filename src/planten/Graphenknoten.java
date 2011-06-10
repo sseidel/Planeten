@@ -6,6 +6,7 @@ public class Graphenknoten {
 	private int niveau;
 	private double rotationsgeschwindigkeit;
 	protected int koordinaten[],zeichnen[];
+	private Engine myEngine;
 	
 	/**
 	 * standart konstructor sets koordinaten,name and root = null
@@ -29,13 +30,13 @@ public class Graphenknoten {
 	 *  initializes a Graphknoten object and sets the koordinaten of the object
 	 * @param koordinaten awaits an int-array with 2 komponents
 	 */
-	Graphenknoten(int[] koordinaten){
-		this();
+	Graphenknoten(String name,int[] koordinaten){
+		this(name);
 		this.koordinaten=koordinaten;
 	}
 	
-	Graphenknoten(int[] koordinaten,Graphenknoten root){
-		this(koordinaten);
+	Graphenknoten(String name,int[] koordinaten,Graphenknoten root){
+		this(name,koordinaten);
 		this.setRoot(root);
 		
 	}

@@ -6,8 +6,9 @@
 package planten;
 
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.*;
 import javax.swing.*;
+
 //import java.lang;
 
 
@@ -20,6 +21,7 @@ public class DrawWindow extends JPanel {
     protected int[] drawsun,drawearth,drawmoon,sun,earth,moon;
     private double counter;
     ArrayList<Graphenknoten> planeten;
+    private Engine myEngine;
 
     public DrawWindow(){
         super();
@@ -28,6 +30,7 @@ public class DrawWindow extends JPanel {
         this.sun=new int[]{this.getWidth()/2,this.getWidth()/2};
         this.earth=new int[]{100,0};
         this.moon=new int[]{20,0};
+        this.myEngine=new Engine(this.counter);
     }
 
     /**
@@ -116,5 +119,20 @@ public class DrawWindow extends JPanel {
         koordinaten[1]+=koordinatenVater[1];
         
         return koordinaten;
+    }
+    
+    private void knotenErstellen(){
+    	this.planeten=new ArrayList<Graphenknoten>();
+    	this.planeten.add(new Graphenknoten("sun",new int[]{this.getWidth()/2,this.getHeight()/2}));
+    	this.planeten.add(new Graphenknoten("earth",new int[]{100,0}));
+    	this.planeten.add(new Graphenknoten("moon",new int[]{20,0}));
+    }
+    
+    private void kantenErstellen(){
+    	Iterator<Graphenknoten> it =this.planeten.iterator();
+    	do{
+    		Graphenknoten gk=it.next();
+    		//gk.
+    	}while(it.hasNext());
     }
 }
