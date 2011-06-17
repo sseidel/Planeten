@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-import java.util.*;
-package planten;
+package planeten;
 
+import java.util.*;
 /**
  *
  * @author sebastian seidel
@@ -21,7 +21,9 @@ public class ThreadEarth implements Runnable{
     @Override public void run(){
     	LinkedList<Thread> threads = new LinkedList<Thread>();
         //this.myDrawWindow.drawearth=this.myDrawWindow.berchneGedrehteKoordinaten(this.myDrawWindow.earth, 1,new double[]{1}, this.myDrawWindow.sun);
+        if(this.myPlanet.root!=null){
         this.myPlanet.zeichnen=this.myEngine.berchneGedrehteKoordinaten(this.myPlanet.koordinaten, this.myPlanet.getNiveau(), this.myPlanet.getRotationSpeed(), this.myPlanet.root.koordinaten);
+        }
         for(Iterator it=this.graphen.iterator();it.hasNext();){
         	Graphenknoten gk =(Graphenknoten) it.next();
         	if(gk.root==this.myPlanet){
@@ -38,4 +40,6 @@ public class ThreadEarth implements Runnable{
     	this.myEngine=myEngine;
     	this.graphen=graphen;
     }
+    
+    
 }

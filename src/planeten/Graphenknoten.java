@@ -1,4 +1,4 @@
-package planten;
+package planeten;
 
 public class Graphenknoten {
 	protected Graphenknoten root;
@@ -6,12 +6,13 @@ public class Graphenknoten {
 	private int niveau;
 	private double rotationsgeschwindigkeit;
 	protected int koordinaten[],zeichnen[];
-	private Engine myEngine;
+	//private Engine myEngine;
 	
 	/**
 	 * standart konstructor sets koordinaten,name and root = null
 	 */
 	public Graphenknoten(){
+                this.zeichnen=new int[2];
 		this.koordinaten=null;
 		this.name=null;
 		this.root=null;

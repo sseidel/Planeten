@@ -1,4 +1,4 @@
-package planten;
+package planeten;
 
 public class Engine {
 	
